@@ -10,6 +10,7 @@ import { UserhomeComponent } from './pages/userhome/userhome.component';
 import { TableComponent } from './pages/table/table.component';
 import { FormComponent } from './pages/form/form.component';
 import { MapComponent } from './pages/map/map.component';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MapComponent } from './pages/map/map.component';
     UserhomeComponent,
     TableComponent,
     FormComponent,
-    MapComponent
+    MapComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
