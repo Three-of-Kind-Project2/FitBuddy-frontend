@@ -7,11 +7,13 @@ import { UserhomeComponent } from './pages/userhome/userhome.component';
 import { TableComponent } from './pages/table/table.component';
 import { FormComponent } from './pages/form/form.component';
 import { MapComponent } from './pages/map/map.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "login", component: LoginComponent },
   { path: "about", component: AboutComponent },
+  { path: "registration", component: RegistrationComponent},
   { path: "userhome", component: UserhomeComponent },
   { path: "table", component: TableComponent },
   { path: "form", component: FormComponent },

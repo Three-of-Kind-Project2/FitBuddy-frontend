@@ -1,0 +1,41 @@
+<section class="login-block">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col login-sec">
+          <h2 class="text-center">Registration Form</h2>
+          <form>
+            <div class="row">
+                <div class="col-md-6"> <input name="fName" type="text" class="form-control" placeholder="First Name" required> </div>
+                <!-- [(ngModel)]="fName" -->
+                <div class="col-md-6"> <input name="lName" type="text" class="form-control" placeholder="Last Name" required> </div>
+                <!-- [(ngModel)]="lName" -->
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12">
+                  <input name="username" type="text" class="form-control" placeholder="Username" required> 
+                  <!-- [(ngModel)]="username" -->
+                </div>  
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-12"> <input name="password" type="text" class="form-control" placeholder="Password" required> </div>
+              <!-- [(ngModel)]="Password" -->  
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-12"> <input name="vPassword" type="text" class="form-control" placeholder="Verify Password" required> </div>  
+              <!-- [(ngModel)]="vPassword" -->
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-12"> <input name="email" type="text" class="form-control" placeholder="Email" required> </div>  
+              <!-- [(ngModel)]="email" -->
+            </div>
+            <div class="form-check text-center mt-3">
+              <button type="submit" (click)="dispAlert(); loginPage()" class="btn btn-login col-md-5">Register</button>
+            </div>
+            <div *ngIf="show" class="alert alert-success mt-3 text-center" role="alert">
+              You have successfully registered!
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

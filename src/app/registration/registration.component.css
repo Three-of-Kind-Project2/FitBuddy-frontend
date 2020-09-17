@@ -1,0 +1,5 @@
+.login-sec{padding: 50px 30px; position:relative;}
+.login-sec h2{margin-bottom:30px; font-weight:800; font-size:30px; color: #6dff49;}
+.login-sec h2:after{content:" "; width:300px; height:5px; background:#018a0c; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto}
+.container{background:rgb(3, 32, 13); border-radius: 10px; width: 20%; height: 40%;}
+.btn-login{background: #00c000; color:#fff; font-weight:600;}

@@ -18,6 +18,6 @@ export class HomeComponent implements OnInit {
   }
 
   aboutPage(): void {
-    this.router.navigateByUrl("about")
+    this.router.navigateByUrl("/about")
   }
 }
