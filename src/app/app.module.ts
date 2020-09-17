@@ -11,6 +11,7 @@ import { TableComponent } from './pages/table/table.component';
 import { FormComponent } from './pages/form/form.component';
 import { MapComponent } from './pages/map/map.component';
 import { SearchComponent } from './pages/search/search.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SearchComponent } from './pages/search/search.component';
     TableComponent,
     FormComponent,
     MapComponent,
-    SearchComponent
+    SearchComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

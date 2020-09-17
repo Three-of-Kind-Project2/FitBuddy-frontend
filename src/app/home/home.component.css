@@ -1,0 +1,56 @@
+.image{
+    height:51.4em; background-size:cover; width:auto;
+    background-image:url('../../assets/img/background.jpg');
+    background-position:50% 50%;
+  }
+
+hr {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 5px solid rgba(26, 36, 20, 0.418);
+}
+
+.btn {
+	box-shadow: 0px 12px 16px -7px #38c211;
+	background:linear-gradient(to bottom, #2fc718 5%, #1da31d 100%);
+	background-color:#2fc718;
+	border-radius:7px;
+	border:1px solid #6dd964;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:21px 55px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #083d00;
+}
+.btn:hover {
+	background:linear-gradient(to bottom, #1da31d 5%, #2fc718 100%);
+	background-color:#1da31d;
+}
+.btn:active {
+	position:relative;
+	top:1px;
+}
+        
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 30px;
+}
+
+.footer {
+  position: absolute;
+  bottom: -5;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 30px;
+  line-height: 25px;
+}
