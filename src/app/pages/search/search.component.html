@@ -7,19 +7,13 @@
     </p>
     <hr />
     <form (submit)="onSubmitForm(form)" #form="ngForm">
-      <input
-        class="form-control"
-        placeholder="e.g. Big Mac"
-        name="recipe"
-        type="text"
-        [(ngModel)]="recipeInput"
-      />
+      <input class="form-control" placeholder="e.g. Big Mac" name="recipe" type="text" [(ngModel)]="recipeInput" />
       <button class="btn btn-primary">Submit</button>
     </form>
 
     <div class="results" id="results">
       <app-food *ngFor="let food of foods" [food]="food">
-        <div class="card mx-auto">
+        <div class="card">
           <div class="card-header">
             <h4>{{ food.name }}</h4>
           </div>
@@ -41,7 +35,7 @@
           </div>
         </div>
       </app-food>
-      
+
     </div>
   </div>
 </div>

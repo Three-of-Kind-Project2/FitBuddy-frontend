@@ -13,15 +13,19 @@ export class UserhomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  searchPage(): void {
+    this.router.navigateByUrl("/search");
+  }
+  
   formPage(): void {
-    this.router.navigateByUrl("/form")
+    this.router.navigateByUrl("/form");
   }
 
   tablePage(): void {
-    this.router.navigateByUrl("/table")
+    this.router.navigateByUrl("/table");
   }
 
   mapPage(): void {
-    this.router.navigateByUrl("/map")
+    this.router.navigateByUrl("/map");
   }
 }
