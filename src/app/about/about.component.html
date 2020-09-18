@@ -1,2 +1,32 @@
 <p>about works!</p>
 <button type="submit" (click)="loginPage()" class="btn btn-primary btn-lg button-padding-top button-padding-bot">Login</button>
+<div class="container">
+    <hr />
+ 
+    <div id="fetchbtn">
+      <button type="button" class="btn btn-outline-success" (click)="getAllUsers();">Click me</button>
+    </div>
+    <div><small class="text-info">Click the button to fetch the users from the database!</small></div>
+ 
+    <div *ngIf="myresponse">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <th>User Id</th>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>Username</th>
+          <th>Password</th>
+          <th>Email</th>
+          <th>Calorie Goal</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of myresponse">
+            <td>{{user.id}}</td>
+            <td>{{user.firstname}}</td>
+            <td>{{user.lastname}}</td>
+            <td>{{user.username}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

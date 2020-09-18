@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +13,9 @@ import { FormComponent } from './pages/form/form.component';
 import { MapComponent } from './pages/map/map.component';
 import { SearchComponent } from './pages/search/search.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
+import { NutritionixServiceService } from './nutritionix-service.service';
 
 @NgModule({
   declarations: [
@@ -30,9 +33,11 @@ import { RegistrationComponent } from './registration/registration.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [NutritionixServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
