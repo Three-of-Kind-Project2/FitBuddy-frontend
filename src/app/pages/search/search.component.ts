@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NutritionixServiceService } from '../../nutritionix-service.service';
+import { NutritionixServiceService } from '../../services/nutritionix-service.service';
 
 @Component({
   selector: 'app-search',

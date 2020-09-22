@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from '../models/User';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-about',
@@ -8,24 +10,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+  public users: User[];
+  constructor(private router: Router, private user: UserService) { }
+  ngOnInit() {
+    this.getUsers();
+   }
 
-  constructor(private router: Router, private http: HttpClient) { }
-  myresponse: any;
-  readonly APP_URL = 'http://localhost:8080/FitBuddy';
-  getAllUsers() {
-    this.http.get(this.APP_URL + '/getusers').subscribe(
-      data => {
-        this.myresponse = data;
-      },
-      error => {
-        console.log('Error occured', error);
+  getUsers() {
+    this.user.getAllUsers().subscribe(
+      (response: User[]) => {
+        this.users = response;
       }
-    );
+    )
   }
-
-  ngOnInit(): void {
-  }
-
+  
   loginPage(): void {
     this.router.navigateByUrl("/login")
   }

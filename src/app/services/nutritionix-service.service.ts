@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { FoodData } from "./food-data";
+import { FoodData } from "../food-data";
 import { Subject } from "rxjs";
 import { map } from "rxjs/operators";
 
