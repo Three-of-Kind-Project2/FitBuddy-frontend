@@ -16,6 +16,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
 import { NutritionixServiceService } from './nutritionix-service.service';
+import { UserComponent } from './models/user/user.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NutritionixServiceService } from './nutritionix-service.service';
     MapComponent,
     SearchComponent,
     NavbarComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
