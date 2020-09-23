@@ -16,7 +16,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
 import { NutritionixServiceService } from './services/nutritionix-service.service';
-import { UserService } from './services/user.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,8 +29,7 @@ import { UserService } from './services/user.service'
     MapComponent,
     SearchComponent,
     NavbarComponent,
-    RegistrationComponent,
-    UserService
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
