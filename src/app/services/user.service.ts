@@ -7,7 +7,7 @@ import { User } from '../models/User';
   providedIn: 'root'
 })
 export class UserService {
-  private baseUrl: string = "http://localhost:8080/FitBuddy"
+  private baseUrl: string = "http://localhost:8080/FitBuddy";
 
   constructor(private http: HttpClient) { }
   
@@ -15,11 +15,12 @@ export class UserService {
     return this.http.get<User[]>(this.baseUrl + "/users");
   }
 
-  getUser(id:number): Observable<User> {
+  getUser(id: number): Observable<User> {
     return this.http.get<User>(this.baseUrl + "/users/" + id);
   }
 
-  addUser(t:User): Observable<User[]> {
-    return this.http.post<User[]>(this.baseUrl + "/users", t);
+  addUser(u: User): Observable<User[]> {
+    console.log(u);
+    return this.http.post<User[]>(this.baseUrl + "/users", u);
   }
 }
