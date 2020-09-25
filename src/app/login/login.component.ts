@@ -11,9 +11,7 @@ import { UserService } from '../services/user.service';
 export class LoginComponent implements OnInit {
   public username: string = "";
   public password: string = "";
-  public showFailed: boolean = false;
-  public showSuccess: boolean = false;
-  
+  public show: Boolean = false;
   constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -27,16 +25,14 @@ export class LoginComponent implements OnInit {
       }, ).toPromise();
       sessionStorage.setItem("currentUser", JSON.stringify(user));
       if (user.username != null) {
+        this.wait(1000);
         this.userhomePage();
-      } else {
-        this.loginPage();
-      }
+      } 
       
     } catch(error) {
-      console.log(error);
+      this.show = true;
     }
   }
-
 
   wait(ms) {
     var start = new Date().getTime();
@@ -55,13 +51,5 @@ export class LoginComponent implements OnInit {
 
   registrationPage(): void {
     this.router.navigateByUrl("/registration");
-  }
-
-  dispFailed() {
-    this.showFailed = true;
-  }
-  
-  dispSuccess() {
-    this.showSuccess = true;
   }
 }
