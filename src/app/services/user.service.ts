@@ -20,7 +20,6 @@ export class UserService {
   }
 
   addUser(u: User): Observable<User[]> {
-    console.log(u);
     return this.http.post<User[]>(this.baseUrl + "/users", u);
   }
 }
