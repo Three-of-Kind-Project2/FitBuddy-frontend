@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from 'src/app/models/User';
 
 @Component({
   selector: 'app-userhome',
@@ -7,10 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./userhome.component.css']
 })
 export class UserhomeComponent implements OnInit {
-
+  public currentUser: User = undefined;
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
   }
 
   searchPage(): void {

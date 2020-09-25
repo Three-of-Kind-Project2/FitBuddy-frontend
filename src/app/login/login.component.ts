@@ -1,6 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { User } from '../models/User';
+import { UserService } from '../services/user.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,31 +11,32 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   public username: string = "";
   public password: string = "";
-  public show: boolean = false;
+  public showFailed: boolean = false;
+  public showSuccess: boolean = false;
   
-  constructor(private router: Router) { }
+  constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
   }
 
-  // async sendLogin(): Promise<void> {
-  //   try {
-  //     // This gets the user object
-  //     let user = await this.http.post<User>('http://ec2-18-206-232-8.compute-1.amazonaws.com:8085/ReimburseWiz/login', {
-  //         username: this.username,
-  //         password: this.password,
-  //       }, {
-  //       withCredentials: true // cookie
-  //     }).toPromise();
-  //     sessionStorage.setItem("currentUser", JSON.stringify(user));
-  //     this.wait(1000);
-  //     this.router.navigateByUrl("/manager");
-  //   } catch(error) {
-  //     // Failed to login
-  //     // console.log(error);
-  //     alert("Failed to login");
-  //   }
-  // }
+  async sendLogin() {
+    try{
+      let user = await this.http.post<User>('http://localhost:8080/FitBuddy/login', {
+        username: this.username,
+        password: this.password,
+      }, ).toPromise();
+      sessionStorage.setItem("currentUser", JSON.stringify(user));
+      if (user.username != null) {
+        this.userhomePage();
+      } else {
+        this.loginPage();
+      }
+      
+    } catch(error) {
+      console.log(error);
+    }
+  }
+
 
   wait(ms) {
     var start = new Date().getTime();
@@ -41,6 +44,9 @@ export class LoginComponent implements OnInit {
     while(end < start + ms) {
       end = new Date().getTime();
    }
+ }
+ loginPage(): void {
+   this.router.navigateByUrl("/login");
  }
 
   userhomePage(): void {
@@ -51,7 +57,11 @@ export class LoginComponent implements OnInit {
     this.router.navigateByUrl("/registration");
   }
 
-  dispAlert() {
-    this.show = true;
+  dispFailed() {
+    this.showFailed = true;
+  }
+  
+  dispSuccess() {
+    this.showSuccess = true;
   }
 }

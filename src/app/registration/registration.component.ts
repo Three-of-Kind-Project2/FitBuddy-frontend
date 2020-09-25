@@ -12,12 +12,12 @@ import { UserService } from '../services/user.service';
 })
 
 export class RegistrationComponent implements OnInit {
-  public fName: string;
-  public lName: string;
-  public username: string;
-  public password: string;
-  public vPassword: string;
-  public email: string;
+  public fName: string = "";
+  public lName: string = "";
+  public username: string = "";
+  public password: string = "";
+  public vPassword: string = "";
+  public email: string ="";
   public goal: number;
   public show: boolean = false;
   public users: User[];
@@ -28,7 +28,8 @@ export class RegistrationComponent implements OnInit {
     Sending user that registered using the form.
   */
   sendUser() {
-    let u = new User(0, this.fName, this.lName, this.username, this.password, this.email, 0);
+    let u = new User(0, this.fName, this.lName, this.username, this.password, this.email, this.goal);
+    console.log(u);
     this.userServ.addUser(u).subscribe(
       (response: User[]) => {
         this.users = response;

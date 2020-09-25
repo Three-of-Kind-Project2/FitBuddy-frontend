@@ -20,6 +20,7 @@ export class AboutComponent implements OnInit {
     this.user.getAllUsers().subscribe(
       (response: User[]) => {
         this.users = response;
+        console.log(this.users);
       }
     )
   }
