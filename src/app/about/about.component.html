@@ -1,32 +1,25 @@
-<p>about works!</p>
-<button type="submit" (click)="loginPage()" class="btn btn-primary btn-lg button-padding-top button-padding-bot">Login</button>
-<h1>Users</h1>
-
-<br>
-<br>
-<h2>Your Users</h2>
-<br>
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">USERNAME</th>
-            <th scope="col">PASSWORD</th>
-            <th scope="col">FIRSTNAME</th>
-            <th scope="col">LASTNAME</th>
-            <th scope="col">EMAIL</th>
-            <th scope="col">GOAL</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let u of users">
-            <td>{{u.id}}</td>
-            <td>{{u.username}}</td>
-            <td>{{u.password}}</td>
-            <td>{{u.firstname}}</td>
-            <td>{{u.lastname}}</td>
-            <td>{{u.email}}</td>
-            <td>{{u.goal}}</td>
-        </tr>
-    </tbody>
-</table>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div id="firstColumn">
+           <!-- first div starts here   -->
+          <h1>About</h1>
+          <p>Fitbuddy is a Nutrition app, that helps users track their calories and consumption.</p>
+                 <!-- first div ends here-->
+        </div>
+    </div>
+    <div class="col-sm">
+        <!-- second div starts here   -->
+      <div id="secondColumn"><p>hello!</p>
+        <!-- second div ends here-->
+    </div>
+    </div>
+    <div class="col-sm">
+        <!-- third div starts-->
+      <div id="thirdColumn"><p>hello!</p>
+        <!-- third div ends-->
+    </div>
+     
+    </div>
+  </div>
+</div>
