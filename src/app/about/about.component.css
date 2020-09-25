@@ -1,11 +1,30 @@
-#firstColumn {
-  background-color: orange;
+.image{
+  height:51.4em; background-size:cover; width:auto;
+  background-image:url('../../assets/img/background.jpg');
+  background-position:50% 50%;
 }
 
-#secondColumn {
-  background-color: green;
+hr {
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 5px solid rgba(26, 36, 20, 0.418);
 }
 
-#thirdColumn {
-  background-color: red;
+li {
+  color: rgb(224, 255, 224);
+  font-size: 110%;
+}
+
+.stackTitle {
+  color: gold;
+  padding-right: .5em;
+  font-weight: bold;
+}
+
+.aboutCard {
+  padding: 0 1em;
+  background-image: radial-gradient(rgb(15, 160, 15), rgb(12, 141, 12), rgb(0, 112, 0));
+  border-radius: 1.5em;
+  box-shadow: -10px 10px 20px 3px rgb(0, 73, 0);
 }
