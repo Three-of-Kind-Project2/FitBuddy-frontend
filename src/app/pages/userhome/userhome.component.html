@@ -1,13 +1,69 @@
-<div class="text-center">
+<div>
+  <!-- <h1 class="text-center mt-5">Welcome: {{ currentUser.firstname + " " + currentUser.lastame }} </h1> -->
+  <h1 class="text-center mt-5">Welcome</h1>
+  <h1 class="text-center mt-2">You calorie goal for the day:</h1>
+  <!-- <h1 class="text-center mt-5">Calorie Goal for the day: {{ currentUser.goal }} </h1> -->
+</div>
+
+<div class="container-fluid text-center padding-top-xl">
+  <div class="row content">
+    <div class="col-lg-2 sidenav">
+    </div>
+
+    <div class="col-md-8 rounded mt-3" style="background-color: rgb(161, 177, 161)">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title mt-3" style="color:black">Consumed Table</h3>
+          <button type="submit" (click)="formPage()" class="btn btn-success float-right mb-1"> Add Food
+            Consumed</button>
+        </div>
+        <table class="table table-hover" id="history-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Food</th>
+              <th>Calories</th>
+              <th>Carbohydrate</th>
+              <th>Protein</th>
+              <th>Total Fat</th>
+              <th>Photo</th>
+              <th>Time Consumed</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-12 mt-3">
+      <div class="col-md-12 mt-3">
+        <button type="submit" (click)="searchPage()" class="btn btn-lg btn-primary">Search for Food Nutrition</button>
+      </div>
+    </div>
+    <div class="col-md-12 mt-3">
+      <button type="submit" class="btn btn-danger"> Logout </button>
+    </div>
+
+    <div class="col-sm-2 sidenav">
+    </div>
+  </div>
+</div>
+
+<!-- <div class="text-center">
     <button type="submit" (click)="formPage()" class="btn btn-primary ">Form</button>
     <button type="submit" (click)="tablePage()" class="btn btn-primary">Table</button>
     <button type="submit" (click)="searchPage()" class="btn btn-primary">Search</button>
-    <button type="submit" (click)="mapPage()" class="btn btn-primary">Map</button>
-</div>
-<div class="container">
-    <div class="row">
-      <div class="col text-center">
-        <button class="btn btn-default">Centered button</button>
-      </div>
-    </div>
-  </div>
+    <button type="submit" (click)="mapPage()" class="btn btn-primary">Map</button>`
+</div> -->
