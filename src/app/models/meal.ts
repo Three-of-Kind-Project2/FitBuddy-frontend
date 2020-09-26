@@ -1,6 +1,6 @@
 import { Type } from '@angular/core';
 import { Timestamp } from 'rxjs/internal/operators/timestamp';
-import { User } from './User';
+import { User } from './user';
 
 export class Meal {
     public meal_id: number;
