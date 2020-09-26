@@ -31,7 +31,13 @@
                 <li class="list-group-item">{{ food.protein }}</li>
                 <li class="list-group-item">{{ food.fat }}</li>
               </ul>
-              <button class="btn btn-primary" (click)="sendFood()">Would you like to submit this food? </button>
+              <select class="col-sm-12 form-control" id="type" [(ngModel)]="type" name="type">
+                <option [ngValue]="undefined" disabled selected> Select Type </option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+              </select>
+              <button class="btn btn-primary" (click)="sendFood(); sendMeal();">Would you like to submit this food? </button>
             </div>
           </div>
         </div>
