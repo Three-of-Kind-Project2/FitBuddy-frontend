@@ -2,7 +2,9 @@
   <br>
   <div class="row justify-content-center">
     <div class="col-sm-8 customCard" style="color: rgb(240, 231, 131);">
-      <h1 class="text-center mt-4">Welcome {{ currentUser.firstname + " " + currentUser.lastname }}!
+      <h1 class="text-center mt-4">
+        <span><button type="button" (click)="profile()" class="btn btn-outline-light float-left"> Edit Profile </button></span>
+        Welcome {{ currentUser.firstname + " " + currentUser.lastname }}!
         <span><button type="submit" (click)="logout()" class="btn btn-danger float-right"> Logout </button></span>
       </h1>
       <div class="progress ml-4 mr-4">

@@ -35,4 +35,8 @@ export class UserhomeComponent implements OnInit {
   mapPage(): void {
     this.router.navigateByUrl("/map");
   }
+
+  profile(): void {
+    this.router.navigateByUrl("/profile");
+  }
 }
