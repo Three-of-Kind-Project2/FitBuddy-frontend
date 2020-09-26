@@ -8,7 +8,7 @@ export class Food {
     public carbs: number;
     public protein: number;
     public fat: number;
-    public meal: Array<Meal>;
+    public meal_id: number;
     constructor(
         food_id: number,
         name: string,
@@ -17,7 +17,7 @@ export class Food {
         carbs: number,
         protein: number,
         fat: number,
-        meal: Array<Meal>
+        meal_id: number
         ) {
         this.food_id = food_id;
         this.name = name;
@@ -26,6 +26,6 @@ export class Food {
         this.carbs = carbs;
         this.protein = protein;
         this.fat = fat;
-        this.meal = meal;
+        this.meal_id = meal_id;
     }
 }
