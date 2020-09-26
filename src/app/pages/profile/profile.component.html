@@ -1,0 +1,55 @@
+<div class="image">
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-sm-5 customCard" style="color: rgb(240, 231, 131);">
+      <h1 class="text-center mt-4 mb-4">
+        <span>
+          <button (click)="back()" type="button" class="btn btn-outline-light float-left mt-2">Back</button>
+        </span>
+        Edit Profile
+        <span>
+          <button (click)="updateUser()" type="button" class="btn text-light float-right mt-2" style="background-color: rgb(3, 32, 13);">Save</button>
+        </span>
+      </h1>
+    </div>
+  </div>
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-sm-5 justShadow" style="background-color: rgb(3, 32, 13)">
+      <br>
+      <div class="form-group row justify-content-around">
+        <label for="goal" class="col-sm-7 col-form-label" style="color: rgb(240, 231, 131);"><h2>Daily Calorie Goal</h2></label>
+        <div class="col-sm-3">
+          <input type="number" class="form-control mt-2" id="goal" [(ngModel)]="goal" placeholder="{{ currentUser.goal }}">
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><!--
+  <div class="row justify-content-center">
+    <div class="col-sm-7 justShadow" style="background-color: rgb(3, 32, 13)">
+      <br>
+      <h2 class="text-center" style="color: rgb(240, 231, 131);">Personal Information</h2>
+      <form>
+        <div class="row justify-content-around">
+          <div class="col-5">
+            <label class="text-light" for="firstname">Firstname</label>
+            <input id="firstname" type="text" class="form-control" placeholder="{{ currentUser.firstname }}">
+          </div>
+          <div class="col-5">
+            <label class="text-light" for="lastname">Lastname</label>
+            <input id="lastname" type="text" class="form-control" placeholder="{{ currentUser.lastname }}">
+          </div>
+        </div>
+        <br>
+        <div class="row justify-content-around">
+          <div class="col-5">
+            <label class="text-light" for="email">Email Address</label>
+            <input id="email" type="text" class="form-control" placeholder="{{ currentUser.email }}">
+          </div>
+        </div>
+      </form>
+      <br>
+    </div>
+  </div>-->
+</div>
