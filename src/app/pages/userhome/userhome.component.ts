@@ -19,6 +19,11 @@ export class UserhomeComponent implements OnInit {
     this.router.navigateByUrl("/search");
   }
   
+  logout(): void {
+    sessionStorage.removeItem("currentUser");
+    this.router.navigateByUrl("/home")
+  }
+
   formPage(): void {
     this.router.navigateByUrl("/form");
   }
