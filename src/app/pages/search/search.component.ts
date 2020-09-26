@@ -27,18 +27,18 @@ export class SearchComponent implements OnInit {
 
   sendMeal() {
     let m = new Meal (0, null, this.type, this.currentUser.id)
-    console.log(this.currentUser);
-    console.log(m);
     this.foodService.addMeal(m).subscribe(
       (response: Meal[]) => {
         this.responseMeal = response;
+        console.log(this.responseMeal);
+        console.log(this.responseMeal[0].id);
+        this.sendFood(this.responseMeal[0].id);
       }
     )
   }
 
-  sendFood() {
-    let f = new Food(0, this.foods[0].name, this.foods[0].photo, this.foods[0].calories, this.foods[0].carbs, this.foods[0].protein, this.foods[0].fat, null);
-    console.log(f);
+  sendFood(id) {
+    let f = new Food(0, this.foods[0].name, this.foods[0].photo, this.foods[0].calories, this.foods[0].carbs, this.foods[0].protein, this.foods[0].fat, id);
     this.foodService.addFood(f).subscribe(
       (response: Food[]) => {
         this.responseFood = response;
