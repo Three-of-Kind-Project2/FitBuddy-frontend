@@ -1,4 +1,33 @@
 .row {
     display: flex;
     align-items: center;
-  } 
+}
+
+.image{
+  height:51.4em; background-size:cover; width:auto;
+  background-image:url('../../../assets/img/background.jpg');
+  background-position:50% 50%;
+}
+
+.customCard {
+  padding: 0 1em;
+  background-image: radial-gradient(rgb(15, 160, 15), rgb(12, 141, 12), rgb(0, 112, 0));
+  border-radius: 1.5em;
+  box-shadow: -10px 10px 20px 3px rgb(0, 73, 0);
+}
+
+hr {
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 5px solid rgba(26, 36, 20, 0.418);
+}
+
+.justShadow {
+  box-shadow: -10px 10px 20px 3px rgb(0, 73, 0);
+}
+
+.customBar {
+  background-color: darkgreen;
+  border: 1px solid white;
+}
