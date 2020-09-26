@@ -2,7 +2,7 @@ import { JsonPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from '../models/User';
+import { User } from '../models/user';
 import { UserService } from '../services/user.service';
 
 @Component({
