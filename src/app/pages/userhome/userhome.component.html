@@ -28,6 +28,7 @@
         <div class="panel panel-primary">
           <div class="panel-heading">
             <h3 class="panel-title mt-3" style="color:#24cc4e">Food Log
+              <span><button type="submit" (click)="removeAll();" class="btn btn-danger float-right mb-2">Remove All</button></span>
               <span><button type="submit" (click)="searchPage()" class="btn btn-success float-right mb-2">Add Food</button></span>
             </h3>
           </div>
@@ -35,42 +36,32 @@
             <thead>
               <tr>
                 <th>#</th>
-                <th>Course</th>
+                <!-- <th>Course</th> -->
                 <th>Food</th>
                 <th>Calories</th>
                 <th>Carbohydrate</th>
                 <th>Protein</th>
                 <th>Total Fat</th>
                 <th>Photo</th>
-                <th>Time Consumed</th>
+                <!-- <th>Time Consumed</th> -->
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let m of meals; let f of foods; let i = index">
+              <tr *ngFor="let i = index; let f of foods">
                 <td>{{ i + 1 }}</td>
-                <td>{{ m.type }}</td>
                 <td>{{ f.name }}</td>
-                <td>{{ i }}</td>
-                <td>{{ i }}</td>
-                <td>{{ i }}</td>
-                <td>{{ i }}</td>
-                <td>{{ i }}</td>
-                <td>{{ m.date }}</td>
+                <td>{{ f.calories }}</td>
+                <td>{{ f.carbs }}</td>
+                <td>{{ f.protein }}</td>
+                <td>{{ f.fat }}</td>
+                <td><img src= "{{ f.url }}" width="60" height="60"></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-
       <div class="col-sm-2 sidenav">
       </div>
     </div>
   </div>
-
-  <!-- <div class="text-center">
-      <button type="submit" (click)="formPage()" class="btn btn-primary ">Form</button>
-      <button type="submit" (click)="tablePage()" class="btn btn-primary">Table</button>
-      <button type="submit" (click)="searchPage()" class="btn btn-primary">Search</button>
-      <button type="submit" (click)="mapPage()" class="btn btn-primary">Map</button>`
-  </div> -->
 </div>

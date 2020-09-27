@@ -10,7 +10,6 @@ import { AboutComponent } from './about/about.component';
 import { UserhomeComponent } from './pages/userhome/userhome.component';
 import { TableComponent } from './pages/table/table.component';
 import { FormComponent } from './pages/form/form.component';
-import { MapComponent } from './pages/map/map.component';
 import { SearchComponent } from './pages/search/search.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
@@ -27,7 +26,6 @@ import { ProfileComponent } from './pages/profile/profile.component';
     UserhomeComponent,
     TableComponent,
     FormComponent,
-    MapComponent,
     SearchComponent,
     NavbarComponent,
     RegistrationComponent,

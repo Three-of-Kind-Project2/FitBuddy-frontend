@@ -12,15 +12,30 @@ import { FoodService } from 'src/app/services/food.service';
 })
 export class UserhomeComponent implements OnInit {
   public currentUser: User = undefined;
+  public user: User;
+  // public combine: combine[]; 
   public foods: Food[];
   public meals: Meal[];
-
   constructor(private router: Router, private foodService: FoodService) { }
-
+  combinedArray: { foods: any, meals: any }[] = [];
   ngOnInit(): void {
     this.currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
-    this.getMeal();
     this.getFood();
+  }
+
+  removeAll() {
+    this.user = this.currentUser;
+    this.foodService.removeAllFoods(this.user).subscribe (
+    )
+    window.location.reload();
+  }
+
+  wait(ms) {
+    var start = new Date().getTime();
+    var end = start;
+    while (end < start + ms) {
+      end = new Date().getTime();
+    }
   }
 
   getMeal() {

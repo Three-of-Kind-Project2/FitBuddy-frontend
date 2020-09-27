@@ -24,14 +24,11 @@ export class SearchComponent implements OnInit {
   public currentUser: User = undefined;
   constructor(private router: Router, private nutrixService: NutritionixServiceService, private foodService: FoodService) { }
 
-
   sendMeal() {
     let m = new Meal (0, null, this.type, this.currentUser.id)
     this.foodService.addMeal(m).subscribe(
       (response: Meal[]) => {
         this.responseMeal = response;
-        console.log(this.responseMeal);
-        console.log(this.responseMeal[0].id);
         this.sendFood(this.responseMeal[0].id);
       }
     )
@@ -59,5 +56,9 @@ export class SearchComponent implements OnInit {
     this.foodSubscription = this.nutrixService.foodsChanged.subscribe(() => {
     this.foods = this.nutrixService.getFoods();
     });
+  }
+
+  goBack() {
+    this.router.navigateByUrl("userhome")
   }
 }
