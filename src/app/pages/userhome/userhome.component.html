@@ -46,16 +46,16 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+              <tr *ngFor="let m of meals; let f of foods; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ m.type }}</td>
+                <td>{{ f.name }}</td>
+                <td>{{ i }}</td>
+                <td>{{ i }}</td>
+                <td>{{ i }}</td>
+                <td>{{ i }}</td>
+                <td>{{ i }}</td>
+                <td>{{ m.date }}</td>
               </tr>
             </tbody>
           </table>

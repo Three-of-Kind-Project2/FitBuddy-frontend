@@ -9,10 +9,16 @@ import { Meal } from '../models/meal';
 })
 export class FoodService {
   private baseUrl: string = 'http://localhost:8080/FitBuddy';
+  
+  getAllMeals(): Observable<Meal[]> {
+    return this.http.get<Meal[]>(this.baseUrl + '/meal');
+  }
+
+  getAllFoods(): Observable<Food[]> {
+    return this.http.get<Food[]>(this.baseUrl + '/log');
+  }
 
   constructor(private http: HttpClient) { }
-  
-
   addFood(f: Food): Observable<Food[]> {
     return this.http.post<Food[]>(this.baseUrl + '/log', f);
   }
