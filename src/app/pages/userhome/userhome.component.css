@@ -31,3 +31,7 @@ hr {
   background-color: darkgreen;
   border: 1px solid white;
 }
+
+#data:hover {
+  color: #24cc4e;
+}
