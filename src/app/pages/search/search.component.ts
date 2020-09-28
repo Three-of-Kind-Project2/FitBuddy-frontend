@@ -41,6 +41,7 @@ export class SearchComponent implements OnInit {
         this.responseFood = response;
       }
     )
+    this.router.navigateByUrl("/userhome");
   }
 
   onSubmitForm($event) {
