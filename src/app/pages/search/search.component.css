@@ -16,7 +16,7 @@
 	 height: 3em;
 }
  #info-box {
-	 border-radius: 8px;
+	 border-radius: 1.5em;
 	 margin-top: 1rem;
 	 padding: 1rem;
 	 background-color: #57b7df 21;
@@ -64,4 +64,11 @@ div .macros {
 
 div .macros .macroCategories {
     text-align: left;
+}
+
+.customCard {
+  padding: 0 1em;
+  background-image: radial-gradient(rgb(15, 160, 15), rgb(12, 141, 12), rgb(0, 112, 0));
+  border-radius: 1.5em;
+  box-shadow: -10px 10px 20px 3px rgb(0, 73, 0);
 }
