@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Food } from '../models/food';
 import { Meal } from '../models/meal';
 import { User } from '../models/user';
@@ -9,7 +10,7 @@ import { User } from '../models/user';
   providedIn: 'root'
 })
 export class FoodService {
-  private baseUrl: string = 'http://localhost:8080/FitBuddy';
+  private baseUrl: string = environment.url + ':' + environment.port + '/FitBuddy';
 
   constructor(private http: HttpClient) { }
 
