@@ -18,7 +18,7 @@ export class FoodService {
   }
 
   getAllFoodByUserId(id: number): Observable<Food[]> {
-    return this.http.get<Food[]>(this.baseUrl + '/log' + id)
+    return this.http.get<Food[]>(this.baseUrl + '/log/' + id)
   }
 
   getAllFoods(): Observable<Food[]> {

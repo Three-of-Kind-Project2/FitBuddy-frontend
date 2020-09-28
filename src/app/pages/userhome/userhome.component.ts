@@ -21,6 +21,7 @@ export class UserhomeComponent implements OnInit {
   ngOnInit(): void {
     this.currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
     // this.getFood();
+    this.getFoodById();
   }
 
   removeAll() {
@@ -38,7 +39,7 @@ export class UserhomeComponent implements OnInit {
     }
   }
   getFoodById() {
-    this.user = this.currentUser
+    this.user = this.currentUser;
     this.foodService.getAllFoodByUserId(this.user.id).subscribe (
       (response:Food[]) => {
         this.foods = response;
