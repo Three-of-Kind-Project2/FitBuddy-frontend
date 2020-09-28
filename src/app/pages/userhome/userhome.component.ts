@@ -14,14 +14,12 @@ export class UserhomeComponent implements OnInit {
   public currentUser: User = undefined;
   public user: User;
   public startingGoal: number = 0;
-  // public combine: combine[]; 
   public foods: Food[];
   public meals: Meal[];
   constructor(private router: Router, private foodService: FoodService) { }
   combinedArray: { foods: any, meals: any }[] = [];
   ngOnInit(): void {
     this.currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
-    // this.getFood();
     this.getFoodById();
   }
 
@@ -57,14 +55,6 @@ export class UserhomeComponent implements OnInit {
       }
     )
   }
-
-  // getFood() {
-  //   this.foodService.getAllFoods().subscribe(
-  //     (response: Food[]) => {
-  //       this.foods = response;
-  //     }
-  //   )
-  // }
 
   searchPage(): void {
     this.router.navigateByUrl("/search");

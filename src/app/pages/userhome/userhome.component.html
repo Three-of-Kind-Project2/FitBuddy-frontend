@@ -8,11 +8,9 @@
         <span><button type="submit" (click)="logout()" class="btn btn-danger float-right"> Logout </button></span>
       </h1>
       <div class="progress ml-4 mr-4">
-        <!-- TODO: style attribute should be set to width: (totalCalories/goal)*100 + "%" -->
-        <div class="progress-bar customBar" role="progressbar" style="width: 25%"></div>
+      <div id="progressBar" class="progress-bar customBar" role="progressbar" style="width: {{ startingGoal / currentUser.goal *100 }}%"></div>
       </div>
       <h2 style="color: rgb(240, 231, 131);" class="text-center mt-2 mb-2">
-        <!-- TODO: "Total" value is inaccurate -->
         Total: {{ startingGoal }} 
         <span style="color: darkgreen;">• </span>
         Goal: {{ currentUser.goal }}
