@@ -13,6 +13,7 @@ import { FoodService } from 'src/app/services/food.service';
 export class UserhomeComponent implements OnInit {
   public currentUser: User = undefined;
   public user: User;
+  public startingGoal: number = 0;
   // public combine: combine[]; 
   public foods: Food[];
   public meals: Meal[];
@@ -43,6 +44,9 @@ export class UserhomeComponent implements OnInit {
     this.foodService.getAllFoodByUserId(this.user.id).subscribe (
       (response:Food[]) => {
         this.foods = response;
+        for (var i = 0; i < this.foods.length; i++) {
+          this.startingGoal += this.foods[i].calories;
+        }
       }
     )
   }
