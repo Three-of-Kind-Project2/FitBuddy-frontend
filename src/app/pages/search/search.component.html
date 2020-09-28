@@ -14,7 +14,7 @@
     <div class="results justify-content-center" id="results">
       <app-food *ngFor="let food of foods" [food]="food">
         <div style="width: 90%" class="card">
-          <div class="card-header">
+          <div class="card-header" style="border-bottom: none; background-color: rgba(0,0,0,0)">
             <h4>{{ food.name }}</h4>
           </div>
           <div class="card-body">

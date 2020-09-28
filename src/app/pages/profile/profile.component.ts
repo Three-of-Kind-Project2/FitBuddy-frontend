@@ -27,7 +27,16 @@ export class ProfileComponent implements OnInit {
       }
     )
     sessionStorage.setItem("currentUser", JSON.stringify(u));
+    this.wait(1000);
     this.router.navigateByUrl("/userhome");
+  }
+
+  wait(ms) {
+    var start = new Date().getTime();
+    var end = start;
+    while (end < start + ms) {
+      end = new Date().getTime();
+    }
   }
 
   back() {
