@@ -41,7 +41,8 @@ export class SearchComponent implements OnInit {
         this.responseFood = response;
       }
     )
-    this.router.navigateByUrl("/userhome");
+    this.wait(1000);
+    this.router.navigateByUrl('/userhome');
   }
 
   onSubmitForm($event) {
@@ -57,6 +58,18 @@ export class SearchComponent implements OnInit {
     this.foodSubscription = this.nutrixService.foodsChanged.subscribe(() => {
     this.foods = this.nutrixService.getFoods();
     });
+  }
+
+  refresh() {
+    window.location.reload();
+  }
+
+  wait(ms) {
+    var start = new Date().getTime();
+    var end = start;
+    while (end < start + ms) {
+      end = new Date().getTime();
+    }
   }
 
   goBack() {

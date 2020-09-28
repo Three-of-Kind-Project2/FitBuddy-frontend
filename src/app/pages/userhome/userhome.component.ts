@@ -16,18 +16,19 @@ export class UserhomeComponent implements OnInit {
   public startingGoal: number = 0;
   public foods: Food[];
   public meals: Meal[];
+
   constructor(private router: Router, private foodService: FoodService) { }
-  combinedArray: { foods: any, meals: any }[] = [];
+  
   ngOnInit(): void {
     this.currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
     this.getFoodById();
   }
-
+  
   removeAll() {
     this.user = this.currentUser;
     this.foodService.removeAllFoods(this.user).subscribe (
     )
-    window.location.reload();
+    this.refresh();
   }
 
   wait(ms) {
@@ -79,5 +80,9 @@ export class UserhomeComponent implements OnInit {
 
   profile(): void {
     this.router.navigateByUrl("/profile");
+  }
+
+  refresh(): void {
+    window.location.reload();
   }
 }
