@@ -20,7 +20,7 @@ export class UserhomeComponent implements OnInit {
   combinedArray: { foods: any, meals: any }[] = [];
   ngOnInit(): void {
     this.currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
-    this.getFood();
+    // this.getFood();
   }
 
   removeAll() {
@@ -37,7 +37,14 @@ export class UserhomeComponent implements OnInit {
       end = new Date().getTime();
     }
   }
-
+  getFoodById() {
+    this.user = this.currentUser
+    this.foodService.getAllFoodByUserId(this.user.id).subscribe (
+      (response:Food[]) => {
+        this.foods = response;
+      }
+    )
+  }
   getMeal() {
     this.foodService.getAllMeals().subscribe(
       (response: Meal[]) => {
@@ -46,13 +53,13 @@ export class UserhomeComponent implements OnInit {
     )
   }
 
-  getFood() {
-    this.foodService.getAllFoods().subscribe(
-      (response: Food[]) => {
-        this.foods = response;
-      }
-    )
-  }
+  // getFood() {
+  //   this.foodService.getAllFoods().subscribe(
+  //     (response: Food[]) => {
+  //       this.foods = response;
+  //     }
+  //   )
+  // }
 
   searchPage(): void {
     this.router.navigateByUrl("/search");

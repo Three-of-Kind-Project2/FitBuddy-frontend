@@ -17,6 +17,10 @@ export class FoodService {
     return this.http.get<Meal[]>(this.baseUrl + '/meal');
   }
 
+  getAllFoodByUserId(id: number): Observable<Food[]> {
+    return this.http.get<Food[]>(this.baseUrl + '/log' + id)
+  }
+
   getAllFoods(): Observable<Food[]> {
     return this.http.get<Food[]>(this.baseUrl + '/log');
   }

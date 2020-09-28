@@ -1,9 +1,3 @@
-.image{
-    height:51.4em; background-size:cover; width:auto;
-    background-image:url('../../assets/img/background.jpg');
-    background-position:50% 50%;
-  }
-
 hr {
     margin-top: .5rem;
     margin-bottom: 1rem;
@@ -48,9 +42,9 @@ body {
 
 .footer {
   position: absolute;
-  bottom: -5;
+  bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 30px;
-  line-height: 25px;
+  height: 56px;
+  line-height: 40px;
 }
